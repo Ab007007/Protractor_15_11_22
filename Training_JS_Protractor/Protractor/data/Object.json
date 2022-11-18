@@ -1,0 +1,27 @@
+{
+    "locators" : {
+        "switchWindowPage" : {
+            "openAlert" : "alert-button"
+        },
+
+        "irctcHomePage" : 
+        {
+            "contactUs" : "Contact Us",
+            "emailID" : "a"
+
+        },
+        "form-page" : {
+            "fnTxtBox" : "first-name",
+            "lnTxtBox" : "first-name",
+            "jnTxtBox" : "first-name",
+            "submitButton" : "Submit",
+            "successMsg" : "//div[@class='alert alert-success']"
+            
+        }
+
+    
+
+    }
+
+    
+}

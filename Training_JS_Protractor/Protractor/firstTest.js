@@ -1,30 +1,40 @@
 describe('First Test', () => {
     
-    function add(a,b) {
-        element(by.model('first')).sendKeys(a);
-        element(by.model('second')).sendKeys(b);
-        element(by.id('gobutton')).click();
-                
-        element(by.binding('latest')).getText().then(function(result){
-            console.log(`Sum of two numbers ${result}`);
-        })
-    }
-    it('Test Case-1', () => {
+    beforeEach(function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
         browser.sleep(8000).then(function(){
             console.log("Test Ended");
         })
-      
-        add(25,25);
-        add(25,26)
-        add(88,89)
-        add(55,66)
+    })
 
-        element.all(by.repeater('result in memory')).each(function(ele,index){
-            ele.getText().then(function(item){
-                console.log(`Element at index ${index}, is ${item}`);
-            })
-        })
-       
+    it('Test Case-1', () => {
+      
+        element(by.model('first')).sendKeys(123);
+        element(by.model('second')).sendKeys(123);
+        element(by.id('gobutton')).click();
+        
+    });
+
+    it('Test Case-2', () => {
+        element(by.model('first')).sendKeys(123);
+        element(by.model('second')).sendKeys(123);
+        element(by.id('gobutton')).click();
+        
+    });
+
+    it('Test Case-3', () => {
+
+        element(by.model('first')).sendKeys(123);
+        element(by.model('second')).sendKeys(123);
+        element(by.id('gobutton')).click();
+        
+    });
+
+    it('Test Case-4', () => {
+
+        element(by.model('first')).sendKeys(123);
+        element(by.model('second')).sendKeys(123);
+        element(by.id('gobutton')).click();
+        
     });
 });
